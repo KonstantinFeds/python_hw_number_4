@@ -11,10 +11,10 @@ def test_greeting():
 
     # TODO Сформируйте нужную строку
     output = f"Привет, {name}! Тебе {age} лет."
+    print(output)
 
     # Проверяем результат
     assert output == "Привет, Анна! Тебе 25 лет."
-test_greeting()
 
 
 def test_rectangle():
@@ -34,7 +34,6 @@ def test_rectangle():
     area = a * b
 
     assert area == 200
-test_rectangle()
 
 
 def test_circle():
@@ -47,14 +46,17 @@ def test_circle():
     # TODO сосчитайте площадь
     area = math.pi * r ** 2
 
+    print(f"Площадь круга равна: {area}")
+
     assert area == 1661.9025137490005
 
     # TODO сосчитайте длину окружности
     length = r * 2 * math.pi
 
+    print(f"Длина окружности равна: {length}")
+
     assert length == 144.51326206513048
 
-test_circle()
 
 
 def test_random_list():
@@ -68,7 +70,6 @@ def test_random_list():
     assert len(l) == 10
     assert all(l[i] <= l[i + 1] for i in range(len(l) - 1))
 
-test_random_list()
 
 def test_unique_elements():
     """
@@ -82,7 +83,6 @@ def test_unique_elements():
     assert isinstance(l, list)
     assert len(l) == 10
     assert l == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-test_unique_elements()
 
 
 def test_dicts():
@@ -101,5 +101,3 @@ def test_dicts():
     assert len(d) == 5
     assert list(d.keys()) == first
     assert list(d.values()) == second
-
-test_dicts()
